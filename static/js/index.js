@@ -542,7 +542,6 @@ $(document).ready(function() {
 	function fetchRemoteData() {
 		// var select = $("select#demos")[0];
 		// filename = select.options[select.selectedIndex].value;
-		filename = "vase.rti";
 		extension = filename.substring(filename.lastIndexOf('.')+1).trim();
 		$.ajax({
 			type: 'get',
@@ -619,6 +618,11 @@ $(document).ready(function() {
 	$("canvas#image_canvas").mouseout(function() {
 		mousedown_image = false;
 	}); 
+
+	$("a").click(function() {
+		filename = this.attributes.filename.value;
+		fetchRemoteData();
+	});
 
 	// // File loading
 	// $("input#file-select").change(function(e) {
