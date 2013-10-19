@@ -16,7 +16,7 @@ $(document).ready(function() {
 	var old_y = 0.0;
 
 	// Image Parameters
-	var filename;
+	var filename = "vase.rti";
 	var extension = "";
 	var width;
 	var height;
